@@ -20,10 +20,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.duvancardozo.DisRiego_FrontMovil"
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "312c8c34-59b4-4d66-9b26-63131bf226d2"
+      }
     }
   }
 }
