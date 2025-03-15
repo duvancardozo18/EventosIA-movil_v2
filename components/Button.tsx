@@ -16,7 +16,7 @@ const Button: React.FC<ButtonProps> = ({ text, onPress, disabled = false }) => {
       onPress={onPress}
       disabled={disabled}
     >
-      <Text style={[typography.bold.large, { color: colors.primary }]}>
+      <Text style={[typography.bold.large, { color: colors.white }]}>
         {text}
       </Text>
     </TouchableOpacity>
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   button: {
     width: "100%",
     padding: 15,
-    backgroundColor: colors.tertiary,
+    backgroundColor: colors.accent,
     borderRadius: 10,
     alignItems: "center",
     marginTop: 10,

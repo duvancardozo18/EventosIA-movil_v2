@@ -27,6 +27,7 @@
       "favicon": "./assets/images/favicon.png"
     },
     "extra": {
+      "API_URL": "https://qpxd4zt2-7777.use2.devtunnels.ms/api",
       "eas": {
         "projectId": "312c8c34-59b4-4d66-9b26-63131bf226d2"
       }

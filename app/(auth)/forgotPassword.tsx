@@ -26,8 +26,7 @@ export default function ForgotPasswordScreen() {
             ¿Olvidaste tu contraseña?
           </Text>
           <Text style={[typography.medium.regular, { color: colors.gray }]}>
-            No te preocupes, Ingresa tu correo para recibir un enlace de
-            recuperación.
+          Introduzca su dirección de correo electrónico para recibir un enlace de recuperación.
           </Text>
 
           <CustomInput
@@ -35,6 +34,7 @@ export default function ForgotPasswordScreen() {
             keyboardType="email-address"
             value={email}
             onChangeText={setEmail}
+            iconName="mail" // Ícono de email
           />
 
           <Button
