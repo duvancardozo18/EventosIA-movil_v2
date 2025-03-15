@@ -29,7 +29,7 @@ export default function RegisterScreen() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [idRole, setIdRole] = useState("2"); // Puedes cambiar esto según el rol por defecto
+  const [idRole, setIdRole] = useState("1"); // Puedes cambiar esto según el rol por defecto
 
   const handleRegister = async () => {
     try {
