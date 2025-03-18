@@ -63,7 +63,7 @@ export default function LoginScreen() {
         <ScrollView contentContainerStyle={styles.scrollContainer}>
           <View style={styles.formContainer}>
             <Text style={[typography.semibold.big, { color: colors.darkGray }]}>
-              Iniciar Sesión
+              INICIAR SESIÓN
             </Text>
             <Text style={[typography.medium.regular, { color: colors.gray }]}>
               Por favor, introduce tu correo y contraseña para acceder a tu
@@ -87,7 +87,7 @@ export default function LoginScreen() {
             {/* Ajuste para centrar el texto */}
             <View style={styles.forgotPasswordContainer}>
               <Text style={[typography.medium.regular, { color: colors.gray }]}>
-                Olvidaste la contraseña?
+                ¿Olvidaste la contraseña?
                 <Text
                   style={[typography.medium.regular, styles.link]}
                   onPress={() => router.push("/forgotPassword")}
@@ -97,45 +97,25 @@ export default function LoginScreen() {
                 </Text>
               </Text>
             </View>
-
-            <Image
-              source={require("../../assets/images/divisor.png")}
-              style={styles.divisor}
-            />
-
-            <View style={styles.loginWrapper}>
-              <LoginButton
-                text="Ingresa con Google"
-                icon={require("../../assets/images/googleLogo.png")}
-                onPress={() => console.log("Google Login")}
+            <View style={styles.formContainer}>
+              <Button
+                text={loading ? "Cargando..." : "Iniciar Sesión"}
+                onPress={handleLogin}
+                disabled={loading}
               />
-
-              <LoginButton
-                text="Ingresa con Outlook"
-                icon={require("../../assets/images/outlookLogo.png")}
-                onPress={() => console.log("Outlook Login")}
-              />
+              <Text style={[typography.medium.regular, { color: colors.gray }]}>
+                ¿No tienes cuenta?
+                <Text
+                  style={[typography.medium.regular, styles.link]}
+                  onPress={() => router.push("/register")}
+                >
+                  {" "}
+                  Regístrate aquí
+                </Text>
+              </Text>
             </View>
           </View>
 
-          <View style={styles.footerContainer}>
-            <Button
-              text={loading ? "Cargando..." : "Iniciar Sesión"}
-              onPress={handleLogin}
-              disabled={loading}
-            />
-
-            <Text style={[typography.medium.regular, { color: colors.gray }]}>
-              No tienes una cuenta?
-              <Text
-                style={styles.link}
-                onPress={() => router.push("/register")}
-              >
-                {" "}
-                Regístrate aquí
-              </Text>
-            </Text>
-          </View>
         </ScrollView>
       </View>
     </SafeAreaView>
@@ -149,22 +129,24 @@ const styles = StyleSheet.create({
   },
   scrollContainer: {
     flexGrow: 1,
+    justifyContent: "center", // Asegura el centrado vertical cuando el contenido no es suficiente
+    alignItems: "center",
   },
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "flex-start",
+    justifyContent: "center", // Centra el formulario verticalmente
     backgroundColor: colors.base,
+    paddingHorizontal: 20,
   },
   formContainer: {
-    flex: 1,
-    gap: 14,
-    width: "100%",
-    paddingTop: 24,
-    paddingHorizontal: 20,
-    alignItems: "flex-start",
-    justifyContent: "flex-start",
+    width: "100%", // Ajusta el ancho del formulario para que no ocupe toda la pantalla
+    maxWidth: 400, // Define un ancho máximo para mejorar la estética en pantallas grandes
+    padding: 20,
     backgroundColor: colors.base,
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 14,
   },
   forgotPasswordContainer: {
     width: "100%",
