@@ -34,6 +34,7 @@ export default function PublicLayout() {
       >
         <Stack.Screen name="index" />
         <Stack.Screen name="(auth)" />
+        <Stack.Screen name="(dashboard)" />
       </Stack>
       <StatusBar style="auto" />
     </>
