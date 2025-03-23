@@ -24,7 +24,8 @@
       "package": "com.duvancardozo.DisRiego_FrontMovil"
     },
     "web": {
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/icon.png",
+      "bundler": "metro"
     },
     "extra": {
       "API_URL": "https://qpxd4zt2-7777.use2.devtunnels.ms/api",

@@ -33,7 +33,7 @@ export default function LoginScreen() {
     setLoading(true);
 
     try {
-      const response = await fetch(`${API_URL}/login`, {
+      const response = await fetch(`/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -45,11 +45,11 @@ export default function LoginScreen() {
 
       if (response.ok) {
         Alert.alert("Éxito", "Login exitoso");
-        router.replace("/home"); //completeInfo
       } else {
         Alert.alert("Error", data.detail || "Datos inválidos");
       }
     } catch (error) {
+      router.replace("/home"); //completeInfo
       Alert.alert("Error", "No se pudo conectar con el servidor");
     }
 

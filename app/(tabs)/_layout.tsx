@@ -51,6 +51,16 @@ const TabsLayout = () => {
           ),
         }}
       />
+      <Tabs.Screen
+        name="menu"
+        options={{
+          title: "Menú",
+          headerShown: false,
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="menu" size={22} color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 };

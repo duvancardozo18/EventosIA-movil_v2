@@ -19,19 +19,16 @@ export default function WelcomeScreen() {
       <ScrollView contentContainerStyle={{ height: "100%" }}>
         <View style={styles.container}>
           {/* Logo más pequeño */}
-          <Image
-            source={require("../assets/images/logo.png")}
-            style={styles.logo}
-          />
+
 
           {/* Imagen principal más grande */}
           <Image
-            source={require("../assets/images/welcome.png")}
+            source={require("../assets/images/loguito.png")}
             style={styles.image}
           />
 
           <Text style={styles.title}>
-            Bienvenido a <Text style={styles.brand}>DisRiego!</Text>
+            Bienvenido a <Text style={styles.brand}>EventosIA!</Text>
           </Text>
 
           <Text style={styles.subtitle}>
@@ -121,7 +118,7 @@ const styles = StyleSheet.create({
     padding: 15,
     alignItems: "center",
     borderRadius: 15,
-    backgroundColor: colors.tertiary,
+    backgroundColor: colors.primary,
     shadowColor: colors.tertiary,
     shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.2,
@@ -130,6 +127,6 @@ const styles = StyleSheet.create({
   },
   loginText: {
     ...typography.semibold.large,
-    color: colors.primary,
+    color: colors.white,
   },
 });
